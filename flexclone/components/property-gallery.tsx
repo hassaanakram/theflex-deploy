@@ -12,7 +12,7 @@ export function PropertyGallery() {
 
   return (
     <div className="space-y-4">
-      <h1 className="text-3xl font-bold text-balance">Appartement Exquis à La Défense</h1>
+      <h1 className="text-3xl font-bold text-balance">Downtown Loft</h1>
 
       <div className="grid grid-cols-4 gap-2 h-96">
         <div className="col-span-2 row-span-2 relative">
