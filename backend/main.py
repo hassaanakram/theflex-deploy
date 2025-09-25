@@ -13,7 +13,6 @@ from sqlalchemy.orm import sessionmaker
 from src.clients import sync_reviews
 from sqlalchemy import create_engine
 from src.clients.db_client import DatabaseClient
-from backend.main import DATABASE_URL
 
 logging.basicConfig(level=logging.DEBUG,
                     format='%(filename)s - %(funcName)s - %(levelname)s - %(message)s')
