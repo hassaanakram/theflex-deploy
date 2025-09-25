@@ -19,7 +19,7 @@ export function PropertyDetails() {
       <section>
         <h2 className="text-xl font-semibold mb-4">About this property</h2>
         <p className="text-muted-foreground leading-relaxed">
-          Ocean View Villa, un endroit idéal pour explorer Paris tout en profitant d'un
+          Downtown Loft, un endroit idéal pour explorer Paris tout en profitant d'un
           environnement moderne et dynamique. Il est spacieux, confortable, et équipé de tout le nécessaire avec des
           lits de qualité. Vous trouverez également un supermarché à proximité, restaurants et cafés dans les environs.
         </p>
