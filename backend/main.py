@@ -60,7 +60,7 @@ def start_scheduler():
         except Exception as e:
             raise e
 
-    scheduler.add_job(job, "interval", seconds=30)
+    scheduler.add_job(job, "interval", minutes=30)
     scheduler.start()
 
 # Example DB URL (Postgres)
