@@ -1,5 +1,4 @@
 import os
-from backend.main import DATABASE_URL
 
 AUTH_KEY = os.getenv('AUTH_KEY', '')
 ACCESS_TOKEN_EXPIRY = os.getenv('ACCESS_TOKEN_EXPIRY', '')
