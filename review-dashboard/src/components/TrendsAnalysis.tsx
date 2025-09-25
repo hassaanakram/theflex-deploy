@@ -15,22 +15,6 @@ const revenueData = [
   { month: 'Jun', revenue: 12800, occupancy: 98 },
 ];
 
-const ratingTrends = [
-  { month: 'Jan', avgRating: 4.2, reviews: 45 },
-  { month: 'Feb', avgRating: 4.1, reviews: 38 },
-  { month: 'Mar', avgRating: 4.4, reviews: 52 },
-  { month: 'Apr', avgRating: 4.3, reviews: 48 },
-  { month: 'May', avgRating: 4.5, reviews: 61 },
-  { month: 'Jun', avgRating: 4.6, reviews: 68 },
-];
-
-const channelData = [
-  { name: 'Airbnb', value: 45, color: '#FF5A5F' },
-  { name: 'VRBO', value: 30, color: '#004F9F' },
-  { name: 'Booking.com', value: 15, color: '#003580' },
-  { name: 'Direct', value: 10, color: '#284e4c' },
-];
-
 const issueCategories = [
   { category: 'Cleanliness', count: 12, severity: 'high' },
   { category: 'Check-in', count: 8, severity: 'medium' },

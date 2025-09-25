@@ -16,6 +16,7 @@ const sortOptions = [
 ];
 
 export function FilterControls({ filters, onFilterChange, onClearFilters, properties, channelsList }: FilterControlsProps) {
+  console.log("Debug", properties);
   const hasActiveFilters = 
     filters.searchQuery !== "" ||
     filters.rating !== "all" || 

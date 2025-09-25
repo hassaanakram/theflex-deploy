@@ -1,5 +1,5 @@
 'use client';
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "./ui/card";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "./ui/table";
 import { Badge } from "./ui/badge";
@@ -9,81 +9,8 @@ import { Star, Eye, EyeOff, MessageSquare, Calendar } from "lucide-react";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "./ui/select";
 import { FilterControls } from "./FilterControls";
 import { ReviewsManagementProps, ReviewType, Review } from "@/types";
-import { fetchReviewsList, toggleReviewVisbility } from "@/services/review.svc";
+import { toggleReviewVisbility } from "@/services/review.svc";
 import { getUniqueChannels } from "@/lib/utils";
-
-const mockReviews: Review[] = [
-  {
-    id: "1",
-    propertyName: "Ocean View Villa",
-    guestName: "Sarah M.",
-    rating: 5,
-    comment: "Absolutely stunning property with incredible ocean views. The host was very responsive and helpful.",
-    date: "2024-09-20",
-    channel: "Airbnb",
-    isPublic: true,
-    sentiment: "positive",
-    category: ["location", "host"],
-    country: "United States",
-    city: "Miami"
-  },
-  {
-    id: "2",
-    propertyName: "Downtown Loft",
-    guestName: "Mike R.",
-    rating: 3,
-    comment: "Good location but the wifi was spotty and check-in process was confusing.",
-    date: "2024-09-18",
-    channel: "VRBO",
-    isPublic: false,
-    sentiment: "neutral",
-    category: ["wifi", "check-in"],
-    country: "Canada",
-    city: "Toronto"
-  },
-  {
-    id: "3",
-    propertyName: "Mountain Cabin",
-    guestName: "Lisa K.",
-    rating: 4,
-    comment: "Beautiful cabin in a peaceful setting. Could use some kitchen upgrades but overall great experience.",
-    date: "2024-09-15",
-    channel: "Booking.com",
-    isPublic: true,
-    sentiment: "positive",
-    category: ["location", "amenities"],
-    country: "United States",
-    city: "Denver"
-  },
-  {
-    id: "4",
-    propertyName: "City Center Apartment",
-    guestName: "David L.",
-    rating: 2,
-    comment: "The apartment was not as clean as expected and there were noise issues from neighboring units.",
-    date: "2024-09-12",
-    channel: "Direct",
-    isPublic: false,
-    sentiment: "negative",
-    category: ["cleanliness", "noise"],
-    country: "United Kingdom",
-    city: "London"
-  },
-  {
-    id: "5",
-    propertyName: "Beach House",
-    guestName: "Emma T.",
-    rating: 5,
-    comment: "Perfect beach getaway! Everything was exactly as described and the amenities were top-notch.",
-    date: "2024-09-10",
-    channel: "Airbnb",
-    isPublic: true,
-    sentiment: "positive",
-    category: ["amenities", "accuracy"],
-    country: "Australia",
-    city: "Sydney"
-  }
-];
 
 
 export function ReviewsManagement({ filters, onFilterChange, onClearFilters, properties, reviews, setReviews }: ReviewsManagementProps) {
@@ -126,7 +53,7 @@ export function ReviewsManagement({ filters, onFilterChange, onClearFilters, pro
     return Array.from({ length: 5 }, (_, i) => (
       <Star
         key={i}
-        className={`h-4 w-4 ${i < rating/2 ? 'fill-yellow-400 text-yellow-400' : 'text-gray-300'
+        className={`h-4 w-4 ${i < rating / 2 ? 'fill-yellow-400 text-yellow-400' : 'text-gray-300'
           }`}
       />
     ));

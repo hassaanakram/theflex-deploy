@@ -9,40 +9,9 @@ import { FilterControls } from "./FilterControls";
 
 export function PropertyOverview({ filters, onFilterChange, onClearFilters, properties, channelsList }: PropertyOverviewProps) {
   
-  const totalRevenue = properties.reduce((sum, prop) => 0, 0);
+  const totalRevenue = properties.reduce(() => 0, 0);
   const avgRating = properties.reduce((sum, prop) => sum + prop.averageRating, 0) / properties.length;
-  const [selectedProperty, setSelectedProperty] = useState<string>("");
-
-  const getFilteredAndSortedProperties = () => {
-    const filtered = properties.filter(property => {
-      if (filters.searchQuery) {
-        const searchLower = filters.searchQuery.toLowerCase();
-        const matchesName = property.property.toLowerCase().includes(searchLower);
-        //const matchesCity = property.city.toLowerCase().includes(searchLower);
-        //const matchesCountry = property.country.toLowerCase().includes(searchLower);
-        if (!matchesName) return false;
-      }
-      if (filters.rating !== "all" && property.averageRating < parseFloat(filters.rating)) return false;
-      return true;
-    });
-
-    return filtered.sort((a, b) => {
-      const aValue = a[filters.sortBy as keyof typeof a];
-      const bValue = b[filters.sortBy as keyof typeof b];
-
-      if (typeof aValue === 'string' && typeof bValue === 'string') {
-        return filters.sortOrder === 'asc'
-          ? aValue.localeCompare(bValue)
-          : bValue.localeCompare(aValue);
-      }
-
-      if (typeof aValue === 'number' && typeof bValue === 'number') {
-        return filters.sortOrder === 'asc' ? aValue - bValue : bValue - aValue;
-      }
-
-      return 0;
-    });
-  };
+  const [selectedProperty, setSelectedProperty] = useState<string>(""); // @typescript-eslint/no-unused-vars
 
   function onPropertySelect(property: string): void {
     return;
