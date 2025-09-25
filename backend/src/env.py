@@ -1,4 +1,5 @@
 import os
+from backend.main import DATABASE_URL
 
 AUTH_KEY = os.getenv('AUTH_KEY', '')
 ACCESS_TOKEN_EXPIRY = os.getenv('ACCESS_TOKEN_EXPIRY', '')
@@ -10,3 +11,4 @@ DB_USERNAME = 'admin'
 DB_PASSWORD = 'admin'
 DB_HOST = 'db'
 DB_PORT = '5432'
+DATABASE_URL = 'postgresql://admin:admin@db/db'

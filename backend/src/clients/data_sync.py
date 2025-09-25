@@ -24,7 +24,7 @@ CHANNEL_MAP = {
     2022: "google",
 }
 
-HOSTAWAY_REVIEWS_URL = "http://host.docker.internal:9000/hostaway/reviews"  # or real API
+HOSTAWAY_REVIEWS_URL = "https://flextest.free.beeceptor.com/reviews"  # or real API
 
 async def sync_reviews():
     db = DatabaseClient()
